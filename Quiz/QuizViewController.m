@@ -23,7 +23,7 @@ if (self) {
     questions = [[NSMutableArray alloc] init];
     answers = [[NSMutableArray alloc] init];
     
-    //Adding the questions and answers to the array now. YAY
+    //Adding the questions and answers to the array now. YAY!
     [questions addObject:@"What is the capital of California?"];
     [answers addObject:@"Sacramento."];
     
@@ -52,7 +52,7 @@ if (self) {
     [answers addObject:@"Yoko Ono."];
 }
 
-    //RETURN THE ADDRESS OF THE NEW OBJECT
+    //Return the address of the new object.
 return self;
     
 }
@@ -62,10 +62,10 @@ return self;
     //Step to the next questions
     currentQuestionIndex++;
     
-    //Am I past the last question? lolidk
+    //Am I past the last question? 
     if (currentQuestionIndex == [questions count]) {
         
-        //Go back to the first question, HOMIE
+        //Go back to the first question
         currentQuestionIndex = 0;
     }
 
@@ -87,10 +87,10 @@ return self;
 - (IBAction)showAnswer:(id)sender
 {
 
-    //What is the answer to the current question? HUH ANSWER BRO
+    //What is the answer to the current question? 
     NSString *answer = [answers objectAtIndex:currentQuestionIndex];
     
-    //Display it in the answer field. yay dun lol.
+    //Display it in the answer field. DONE!
     [answerField setText:answer];
 }
 @end
