@@ -50,6 +50,15 @@ if (self) {
     
     [questions addObject:@"Who did John Lennon marry?"];
     [answers addObject:@"Yoko Ono."];
+    
+    [questions addObject:@"Who invented the telephone?"];
+    [answers addObject:@"Alexander Grand Bell."];
+    
+    [questions addObject:@"In terms of Celsius, at what temperature does water boil?"];
+    [answers addObject:@"100 degrees."];
+    
+    [questions addObject:@"Who was the first human being that went to space?"];
+    [answers addObject:@"Yuri Gagarin."];
 }
 
     //Return the address of the new object.
