@@ -34,7 +34,7 @@ if (self) {
     [answers addObject:@"3 minutes."];
     
     [questions addObject:@"How many Ivy League schools are there in the world?"];
-    [answers addObject:@"7."];
+    [answers addObject:@"8."];
     
     [questions addObject:@"How many months have 31 days?"];
     [answers addObject:@"7."];
