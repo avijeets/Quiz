@@ -13,56 +13,62 @@
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 
 {
-
-//Call init method that is implemented by the superclass
-self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-
-
-if (self) {
-    //Creating two arrays and making pointers point toward them
-    questions = [[NSMutableArray alloc] init];
-    answers = [[NSMutableArray alloc] init];
     
-    //Adding the questions and answers to the array now. YAY!
-    [questions addObject:@"What is the capital of California?"];
-    [answers addObject:@"Sacramento."];
+    //Call init method that is implemented by the superclass
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
-    [questions addObject:@"Who said, 'Veni Vedi Vici'?"];
-    [answers addObject:@"Ceasar."];
     
-    [questions addObject:@"How long is each round in a boxing match?"];
-    [answers addObject:@"3 minutes."];
+    if (self) {
+        //Creating two arrays and making pointers point toward them
+        questions = [[NSMutableArray alloc] init];
+        answers = [[NSMutableArray alloc] init];
+        
+        //Adding the questions and answers to the array now. YAY!
+        [questions addObject:@"What is the capital of California?"];
+        [answers addObject:@"Sacramento."];
+        
+        [questions addObject:@"Who said, 'Veni Vedi Vici'?"];
+        [answers addObject:@"Ceasar."];
+        
+        [questions addObject:@"How long is each round in a boxing match?"];
+        [answers addObject:@"3 minutes."];
+        
+        [questions addObject:@"How many Ivy League schools are there in the world?"];
+        [answers addObject:@"8."];
+        
+        [questions addObject:@"How many months have 31 days?"];
+        [answers addObject:@"7."];
+        
+        [questions addObject:@"Who invented the telephone?"];
+        [answers addObject:@"Alexander Grand Bell."];
+        
+        [questions addObject:@"How much does a liter of water weigh?"];
+        [answers addObject:@"1 kilogram (kg)."];
+        
+        [questions addObject:@"What is the view that economic output is influenced by aggregate demand?"];
+        [answers addObject:@"Keynesian Economics."];
+        
+        [questions addObject:@"What is the smallest ocean?"];
+        [answers addObject:@"Arctic Ocean."];
+        
+        [questions addObject:@"How long did the Hundred Years' War last?"];
+        [answers addObject:@"116 years."];
+        
+        [questions addObject:@"Who led the expansion of the steel industry in the late 19th century?"];
+        [answers addObject:@"Andrew Carnegie."];
+        
+        [questions addObject:@"Who did John Lennon marry?"];
+        [answers addObject:@"Yoko Ono."];
+        
+        [questions addObject:@"In terms of Fahrenheit, at what temperature does water boil?"];
+        [answers addObject:@"212 degrees."];
+        
+        [questions addObject:@"Who was the first human being that went to space?"];
+        [answers addObject:@"Yuri Gagarin."];
+    }
     
-    [questions addObject:@"How many Ivy League schools are there in the world?"];
-    [answers addObject:@"8."];
-    
-    [questions addObject:@"How many months have 31 days?"];
-    [answers addObject:@"7."];
-    
-    [questions addObject:@"Who invented the telephone?"];
-    [answers addObject:@"Alexander Grand Bell."];
-    
-    [questions addObject:@"How much does a liter of water weigh?"];
-    [answers addObject:@"1 kilogram (kg)."];
-    
-    [questions addObject:@"What is the smallest ocean?"];
-    [answers addObject:@"Arctic Ocean."];
-    
-    [questions addObject:@"Who did John Lennon marry?"];
-    [answers addObject:@"Yoko Ono."];
-    
-    [questions addObject:@"Who invented the telephone?"];
-    [answers addObject:@"Alexander Grand Bell."];
-    
-    [questions addObject:@"In terms of Celsius, at what temperature does water boil?"];
-    [answers addObject:@"100 degrees."];
-    
-    [questions addObject:@"Who was the first human being that went to space?"];
-    [answers addObject:@"Yuri Gagarin."];
-}
-
     //Return the address of the new object.
-return self;
+    return self;
     
 }
 
@@ -71,31 +77,31 @@ return self;
     //Step to the next questions
     currentQuestionIndex++;
     
-    //Am I past the last question? 
+    //Am I past the last question?
     if (currentQuestionIndex == [questions count]) {
         
         //Go back to the first question
         currentQuestionIndex = 0;
     }
-
+    
     //Get the string at that index in the questions aray
     NSString *question = [questions objectAtIndex:currentQuestionIndex];
-
+    
     //Log the string to the console
     NSLog(@"displaying questio: %@", question);
-
+    
     
     //Display the string in the question field
     [questionField setText:question];
-
-
+    
+    
     //Clear the answer field
     [answerField setText:@"???"];
 }
 
 - (IBAction)showAnswer:(id)sender
 {
-
+    
     //What is the answer to the current question? 
     NSString *answer = [answers objectAtIndex:currentQuestionIndex];
     
