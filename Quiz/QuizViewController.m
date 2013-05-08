@@ -40,7 +40,7 @@
         [answers addObject:@"7."];
         
         [questions addObject:@"Who invented the telephone?"];
-        [answers addObject:@"Alexander Grand Bell."];
+        [answers addObject:@"Alexander Graham Bell."];
         
         [questions addObject:@"How much does a liter of water weigh?"];
         [answers addObject:@"1 kilogram (kg)."];
